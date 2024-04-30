@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital@0;1&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/04bf603a0f.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="img/logo parts/icon.png" type="image/x-icon">
+    <script src="order.js" defer></script>
+    <title>Njeguški specijaliteti</title>
+    <style>
+        body{
+            background-color: #1b3051;
+        }
+
+        .center{
+            margin: 350px auto;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border: 5px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin{
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+
+    </style>
+</head>
+<body id="body">
+    <div class="center" id="preload">
+    </div>
+
+    <script>
+        var loader = document.getElementById("preload")
+        window.addEventListener("load", function(){
+            loader.style.display = "none";
+            var body = document.getElementById('body')
+            body.style.backgroundColor = 'white';
+        })
+    </script>
+    <nav>
+        <a href="index.html"><img src="img/logo parts/logo.png" alt="logo"></a>
+        <div class="navlinks" id="navLinks">
+            <i class="fa fa-times" onclick="hidemenu()"></i>
+            <ul>
+                <li><a href="index.html">POČETNA</a></li>
+                <li><a href="#products">PROIZVODI</a></li>
+                <li><a href="#order">PORUČITE</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showmenu()"></i>
+    </nav>
+    <section class="header">
+        <div class="text">
+            <h1>Vrhunski specijaliteti sa Njeguša,</h1>
+            <p>mjesta gdje se miješaju morska i kontinentalna klima, što daje jedinstvenu notu ukusa i mirisa pršutu i ostalim suvim delikatesima.</p>
+            <a href="#products" class="button">Saznajte više</a>
+        </div>
+    </section>
+
+    <section class="products" id="products">
+        <h1>Naši proizvodi</h1>
+        <p>Meso se suši na tradicionalan način, isključivo na bukvi. Svi proizvodi su rezani i pakovani u manja vakuum pakovanja.</p>
+        <div class="all">
+            <a href="#order"><div class="product">
+                <h3>Njeguški pršut</h3>
+                <img src="img/products/product1.jpg">
+                <p>Jedan od najpoznatijih proizvoda crnogorske kuhinje. Ima poseban ukus i miris, kao rezultat mešanja morskog i
+                    planinskog vazduha.
+                </p>
+            </div></a>
+            <a href="#order"><div class="product">
+                <h3>Pečenica</h3>
+                <img src="img/products/product1.jpg">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, s
+                    ed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                </p>
+            </div></a>
+            <a href="#order"><div class="product">
+                <h3>Suvi vrat</h3>
+                <img src="img/products/product1.jpg">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, s
+                    ed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                </p>
+            </div></a>
+            <a href="#order"><div class="product">
+                <h3>Pančeta</h3>
+                <img src="img/products/product1.jpg">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, s
+                    ed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                </p>
+            </div></a>
+            <a href="#order"><div class="product">
+                <h3>Goveđi pršut</h3>
+                <img src="img/products/product1.jpg">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, s
+                    ed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                </p>
+            </div></a>
+            <a href="#order"><div class="product">
+                <h3>Punomasni kravlji sir</h3>
+                <img src="img/products/product1.jpg">
+                <p>Da bi trpeza bila kompletna, tu je i njeguški punomasni kravlji sir, koji jednom kada probate stalno mu se
+                    vraćate.
+                </p>
+            </div></a>
+        </div>
+    </section>
+
+    <section class="comments">
+        <h1>Šta su rekli o nama</h1>
+        <div class="all">
+            <div class="comment">
+                <i class="fa-solid fa-quote-right fa-2xl quotes"></i>
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, s
+                    ed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                     </p>
+                    <h3><img src="img/default/user1.jpg" alt="User1">Ime i prezime 1</h3>
+                </div>
+            </div>
+            <div class="comment">
+                <i class="fa-solid fa-quote-right fa-2xl quotes"></i>
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, s
+                    ed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                     </p>
+                    <h3><img src="img/default/user2.jpg" alt="User2">Ime i prezime 2</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="order" id="order">
+        <h1>Poručite neki od naših specijaliteta</h1>
+        <div class="orderRow">
+            <div class="productorder">
+                <div>
+                    <input type="checkbox" name="product1" id="productcheckbox1" class="checkbox">
+                    <label for="productcheckbox1" id="label1">Njeguški pršut (2500 din/kg)</label>
+                    <input type="number" name="quantity" id="productquantity1" value="0" disabled class="numberinput">
+                </div>
+                <div>
+                    <input type="checkbox" name="product2" id="productcheckbox2" class="checkbox">
+                    <label for="productcheckbox2" id="label2">Pečenica (2000 din/kg)</label>
+                    <input type="number" name="quantity" id="productquantity2" value="0" disabled class="numberinput">
+                </div>
+                <div>
+                    <input type="checkbox" name="product3" id="productcheckbox3" class="checkbox">
+                    <label for="productcheckbox3" id="label3">Suvi vrat (2000 din/kg)</label>
+                    <input type="number" name="quantity" id="productquantity3" value="0" disabled class="numberinput">
+                </div>
+                <div>
+                    <input type="checkbox" name="product4" id="productcheckbox4" class="checkbox">
+                    <label for="productcheckbox4" id="label4">Pančeta (2000 din/kg)</label>
+                    <input type="number" name="quantity" id="productquantity4" value="0" disabled class="numberinput">
+                </div>
+                <div>
+                    <input type="checkbox" name="product5" id="productcheckbox5" class="checkbox">
+                    <label for="productcheckbox5" id="label5">Goveđi pršut (2700 din/kg)</label>
+                    <input type="number" name="quantity" id="productquantity5" value="0" disabled class="numberinput">
+                </div>
+                <div>
+                    <input type="checkbox" name="product6" id="productcheckbox6" class="checkbox">
+                    <label for="productcheckbox6" id="label6">Punomasni kravlji sir (1800 din/kg)</label>
+                    <input type="number" name="quantity" id="productquantity6" value="0" disabled class="numberinput">
+                </div>
+                <p id="total"></p>
+            </div>
+            <form action="https://formsubmit.co/narudzbine@svezameze.com/" method="POST">
+                <input type="text" name="Ime&nbsp;i&nbsp;prezime" id="" placeholder="Ime i prezime" required>
+                <input type="email" name="Email&nbsp;adresa" id="" placeholder="Email adresa" required>
+                <input type="tel" name="Broj&nbsp;telefona" id="" placeholder="Broj telefona">
+                <textarea name="Dodatne&nbsp;informacije&nbsp;(napomena)" id="" placeholder="Napomena"></textarea>
+                <textarea type="text" name="Narudžbina" id="ordertext"></textarea>
+                <input type="hidden" name="_subject" value="Nova porudžbina njeguških specijaliteta">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="http://127.0.0.1:5500/thank-you.html">
+                <button type="submit" id="orderbutton">Poručite</button>
+            </form>
+        </div>
+    </section>
+
+<script>
+    var navLinks = document.getElementById("navLinks")
+    
+    function showmenu(){
+        navLinks.style.display = "block"
+        navLinks.style.animation = "menuopen 1s"
+    }
+
+    function hidemenu(){
+        navLinks.style.animation = "menuclose 1s"
+        setTimeout(() => {
+            navLinks.style.display = 'none'
+        }, 900);
+    }
+
+    //Navigation change
+    /*let observer = new IntersectionObserver(entries => {
+    if (entries[0].boundingClientRect.y < 0) {
+    document.querySelector("nav").classList.add("colorchange");
+    } else {
+        document.querySelector("nav").classList.remove("colorchange");
+    }
+    });
+    observer.observe(document.querySelector(".header"));*/
+
+    if (screen.width > 700){
+        window.addEventListener("scroll", () => {
+            if (window.scrollY >= window.innerHeight) {
+                document.querySelector("nav").classList.add("colorchange")
+            } else {
+                document.querySelector("nav").classList.remove("colorchange")
+            }
+        });
+    }
+    
+
+
+
+</script>
+
+<footer>
+    
+    <div class="footerRow">
+        
+        <div class="footerText">
+            <img src="img/logo parts/logo.png" alt="">
+            <h4>O nama</h4>
+            <p>Nudimo Vam vrhunske specijalitete sa Njeguša,
+                mjesta gdje se miješaju morska i kontinentalna klima, što daje jedinstvenu notu ukusa i mirisa pršutu i ostalim suvim delikatesima.
+            </p>
+        </div>
+        <div class="footerNav">
+            <ul>
+                <li><a href="index.html">POČETNA</a></li>
+                <li><a href="#products">PROIZVODI</a></li>
+                <li><a href="#order">PORUČITE</a></li>
+            </ul>
+        </div>
+        <div class="media">
+            <a href="mailto: porudzbine@svezameze.com"><i class="fa fa-envelope"></i></a>
+            <a href=""><i class="fa fa-instagram"></i></a>
+            <a href="tel:+381605477755"><i class="fa fa-phone"></i></a>
+            <a href=""><i class="fa fa-linkedin"></i></a>
+        </div>
+    </div>
+    <a href="https://ignjatovicpavle.github.io/"><p>Copyright © 2024 Pavle Ignjatović. All rights reserved.</p> </a>
+</footer>
+
+</body>
+</html>

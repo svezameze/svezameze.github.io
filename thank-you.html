@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital@0;1&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/04bf603a0f.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+    <title>Hvala na poverenju | Njeguški specijaliteti</title>
+    <style>
+        body{
+            background-color: #1b3051;
+        }
+
+        .center{
+            margin: 350px auto;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border: 5px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin{
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+
+    </style>
+</head>
+<body id="body">
+    <div class="center" id="preload">
+    </div>
+
+    <script>
+        var loader = document.getElementById("preload")
+        window.addEventListener("load", function(){
+            loader.style.display = "none";
+            var body = document.getElementById('body')
+            body.style.backgroundColor = 'white';
+        })
+    </script>
+    <nav>
+        <a href="index.html"><img src="img/logo transparent.png" alt="logo"></a>
+        <div class="navlinks" id="navLinks">
+            <i class="fa fa-times" onclick="hidemenu()"></i>
+            <ul>
+                <li><a href="index.html">POČETNA</a></li>
+                <li><a href="index.html#products">PROIZVODI</a></li>
+                <li><a href="contact.html">KONTAKT</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showmenu()"></i>
+    </nav>
+    <section class="header">
+        <div class="text">
+            <h1>Vaša narudžbina je primljena!</h1>
+            <p>Hvala Vam na ukazanom poverenju!</p>
+            <a href="index.html" class="button">Početna stranica</a>
+        </div>
+    </section>
+
+<script>
+    var navLinks = document.getElementById("navLinks")
+    
+    function showmenu(){
+        navLinks.style.display = "block"
+        navLinks.style.animation = "menuopen 1s"
+    }
+
+    function hidemenu(){
+        navLinks.style.animation = "menuclose 1s"
+        setTimeout(() => {
+            navLinks.style.display = 'none'
+        }, 900);
+    }
+
+    //Navigation change
+    /*let observer = new IntersectionObserver(entries => {
+    if (entries[0].boundingClientRect.y < 0) {
+    document.querySelector("nav").classList.add("colorchange");
+    } else {
+        document.querySelector("nav").classList.remove("colorchange");
+    }
+    });
+    observer.observe(document.querySelector(".header"));*/hidemenu
+    window.addEventListener("scroll", () => {
+    if (window.scrollY > window.innerHeight) {
+        document.querySelector("nav").classList.add("colorchange")
+    } else {
+        document.querySelector("nav").classList.remove("colorchange")
+    }
+    });
+
+
+
+</script>
+
+<footer>
+    <div class="footerRow">
+        <div class="footerText">
+            <h4>O nama</h4>
+            <p>Ovde treba da stoji neki tekst.
+            </p>
+        </div>
+        <div class="footerNav">
+            <ul>
+                <li><a href="index.html">POČETNA</a></li>
+                <li><a href="about.html">PROIZVODI</a></li>
+                <li><a href="contact.html">KONTAKT</a></li>
+            </ul>
+        </div>
+        <div class="media">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-linkedin"></i>
+        </div>
+    </div>
+    <a href="https://ignjatovicpavle.github.io/"><p>Copyright © 2024 Pavle Ignjatović. All rights reserved.</p> </a>
+</footer>
+
+</body>
+</html>
